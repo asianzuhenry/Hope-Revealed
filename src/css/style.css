@@ -1,0 +1,30 @@
+* {
+    font-family: "Dosis", sans-serif;
+}
+
+section.about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.images img {
+    width: 300px;
+    height: 300px;
+    margin: 12px;
+}
+
+.about-text {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+}
+.about-text p {
+    text-align: center;
+}
