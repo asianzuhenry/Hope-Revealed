@@ -1,5 +1,11 @@
 * {
     font-family: "Dosis", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.logo{
+    width: 100px;
+    height: 100%;
 }
 
 section.about {
@@ -21,8 +27,10 @@ section.about {
 }
 
 .about-text {
+    height: 100%;
     padding: 20px 0px;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 .about-text p {
