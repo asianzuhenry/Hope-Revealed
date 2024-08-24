@@ -2,6 +2,9 @@
     --color-primary: crimson;
     --color-secondary: rgb(3, 29, 77);
     --color-white: #ffffff;
+    --textxxl: 52px;
+    --textxl: 32px;
+    --textl: 24px;
 ;
 }
 
@@ -96,3 +99,22 @@
   footer .footertext p {
     text-align: center;
   }
+
+  /* main */
+
+.wrapper main {
+  width: 100%;
+}
+.wrapper main .hero-section {
+  background-image: url("../assets/images/image1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wrapper main .hero-section h2 {
+  font-size: var(--textxxl);
+}
+.wrapper main .hero-section p {
+  text-align: center;
+  font-size: var(--textl);
+}
