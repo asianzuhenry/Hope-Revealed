@@ -1,0 +1,98 @@
+:root {
+    --color-primary: crimson;
+    --color-secondary: rgb(3, 29, 77);
+    --color-white: #ffffff;
+;
+}
+
+  .wrapper header {
+    background-color: var(--color-primary);
+  }
+  .wrapper header .logo {
+  }
+  .wrapper header .logo img {
+    width: 100%;
+  }
+  .wrapper header .heading {
+    /* color: var(--color-white); */
+  }
+  .wrapper header .heading h1 {
+    color: var(--color-white);
+  }
+  .wrapper header .navigation {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    height: 100%;
+    width: 100%;
+    display: none;
+  }
+  .wrapper header .navigation nav {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    height: 100%;
+    width: 100%;
+  }
+  .wrapper header .navigation nav ul {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .wrapper header .navigation nav ul li {
+   list-style: none;
+  }
+  .wrapper header .navigation nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+  }
+  .wrapper header .togglebutton button {
+    padding: 4px;
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+  }
+  
+  /* footer */
+  footer {
+    grid-row: 3;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  footer .footernavigation {
+    grid-row: 1;
+    width: 100%;
+    height: 200px;
+  }
+  footer .footernavigation nav {
+    width: 100%;
+    height: 200px;
+  }
+  footer .footernavigation nav ul {
+    width: 100%;
+    height: 200px;
+    display: grid;
+  }
+  footer .footernavigation nav ul li {
+    width: 100%;
+    height: 100%;
+    display: grid;
+  }
+  footer .footernavigation nav ul li a {
+    width: 100%;
+    height: 100%;
+  }
+  footer .footertext {
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+  }
+  footer .footertext p {
+    text-align: center;
+  }
