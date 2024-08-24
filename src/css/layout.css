@@ -11,10 +11,11 @@
   height: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 1fr 12fr 2fr;
+  grid-template-rows: 1fr 16fr 4fr;
 }
 
 .wrapper header {
+  grid-row: 1;
   width: 100%;
   height: fit-content;
   display: grid;
@@ -54,8 +55,8 @@
   width: 100%;
 }
 .wrapper header .navigation nav ul {
-grid-column: 1 / -1;
-grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -68,7 +69,7 @@ grid-row: 1 / -1;
   height: 100%;
   display: flex;
 }
-.wrapper header .navigation nav ul li a{
+.wrapper header .navigation nav ul li a {
   width: 100%;
   height: 100%;
   padding: 8px;
@@ -81,6 +82,47 @@ grid-row: 1 / -1;
   display: grid;
   align-items: center;
   justify-content: center;
+}
+
+/* footer */
+footer {
+  grid-row: 3;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+footer .footernavigation {
+  grid-row: 1;
+  width: 100%;
+  height: 200px;
+}
+footer .footernavigation nav {
+  width: 100%;
+  height: 200px;
+}
+footer .footernavigation nav ul {
+  width: 100%;
+  height: 200px;
+  display: grid;
+}
+footer .footernavigation nav ul li {
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+footer .footernavigation nav ul li a {
+  width: 100%;
+  height: 100%;
+}
+footer .footertext {
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+footer .footertext p {
+  text-align: center;
 }
 
 @media screen and (min-width: 600px) {
@@ -125,8 +167,8 @@ grid-row: 1 / -1;
     width: 100%;
   }
   .wrapper header .navigation nav ul {
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -139,7 +181,7 @@ grid-row: 1 / -1;
     height: 100%;
     display: flex;
   }
-  .wrapper header .navigation nav ul li a{
+  .wrapper header .navigation nav ul li a {
     width: 100%;
     height: 100%;
     padding: 8px;
@@ -153,10 +195,13 @@ grid-row: 1 / -1;
     align-items: center;
     justify-content: center;
   }
+
+
+
 }
 
 @media screen and (min-width: 1000px) {
-  header {
+  .wrapper header {
     /* height: 10vh; */
     background-color: brown;
     display: grid;
@@ -175,37 +220,56 @@ grid-row: 1 / -1;
     text-align: center;
   }
 
-  .wrapper header .navigation { 
+  .wrapper header .navigation {
     display: flex;
-      grid-column: 6 / -1;
-      grid-row: 1/ -1;
-      height: 100%;
-      width: 100%;
-
+    grid-column: 6 / -1;
+    grid-row: 1/ -1;
+    height: 100%;
+    width: 100%;
   }
   .wrapper header .navigation nav ul {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-direction: row;
-      width: 100%;
-      height: 100%;
-    }
-    .wrapper header .navigation nav ul li {
-      width: 100%;
-      height: 100%;
-      display: flex;
-    }
-    .wrapper header .navigation nav ul li a{
-      width: 100%;
-      height: 100%;
-      padding: 0px;
-    }
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+  .wrapper header .navigation nav ul li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .wrapper header .navigation nav ul li a {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+  }
   .wrapper header .togglebutton {
     display: none;
   }
 
-}
+    /* footer */
+  footer {
+    grid-row: 3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20px 1fr 20px 1fr 20px;
+    grid-template-rows: 20px repeat(1, 1fr) 20px;
+  }
+  footer .footernavigation {
+    grid-column: 4;
+    grid-row: 2;
+    width: 100%;
+    height: 200px;
+  } 
+  footer .footertext {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    height: 200px;
+  } 
 
+}
