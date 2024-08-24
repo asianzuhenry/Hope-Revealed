@@ -11,6 +11,7 @@
 
   .wrapper header {
     background-color: var(--color-primary);
+    overflow: hidden;
   }
   .wrapper header .logo {
   }
@@ -24,16 +25,12 @@
     color: var(--color-white);
   }
   .wrapper header .navigation {
-    grid-column: 1 / -1;
     grid-row: 3;
     height: 100%;
     width: 100%;
     display: none;
   }
   .wrapper header .navigation nav {
-    display: grid;
-    grid-template-rows: repeat(12, 1fr);
-    grid-template-columns: repeat(12, 1fr);
     height: 100%;
     width: 100%;
   }
@@ -50,9 +47,31 @@
   .wrapper header .navigation nav ul li {
    list-style: none;
   }
+  @media screen and (min-width: 1000px) {
+    .wrapper header .navigation nav ul li a {
+      color: var(--color-white);
+      text-decoration: none;
+      font-size: var(--textl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wrapper header .navigation nav ul li a:hover {
+      background-color: var(--color-secondary);
+      border-bottom: 2px solid var(--color-white);
+      scale: 101%;
+    }
+
+  }
   .wrapper header .navigation nav ul li a {
     color: var(--color-white);
     text-decoration: none;
+    font-size: var(--textl);
+  }
+  .wrapper header .navigation nav ul li a:hover {
+    background-color: var(--color-secondary);
+    border-bottom: 2px solid var(--color-white);
+    scale: 101%;
   }
   .wrapper header .togglebutton button {
     padding: 4px;
@@ -90,6 +109,7 @@
     width: 100%;
     height: 100%;
   }
+
   footer .footertext {
     grid-row: 2;
     width: 100%;
@@ -119,6 +139,7 @@
   text-align: center;
   font-size: var(--textl);
 }
+
 
 
 /* about-section */
