@@ -1,7 +1,11 @@
 console.log('Server is running...');
 
 let yr = new Date().getFullYear()
-// const Year = document.querySelector(".year").innerText = yr
+
+const Year = document.querySelector("#year")
+if (Year) {
+    Year.innerText = yr
+}
 let isVisible = false
 
 const ToggleNavigation = () => {
