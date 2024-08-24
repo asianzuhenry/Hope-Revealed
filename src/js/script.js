@@ -7,8 +7,8 @@ let isVisible = false
 const ToggleNavigation = () => {
     console.log("clcked");
     
-    // const Menu = document.querySelector("#nav")
+    const Menu = document.querySelector(".navigation")
 
-    // isVisible ? isVisible = false : isVisible = true
-    // isVisible ? Menu.style.display = "block" : Menu.style.display = ''
+    isVisible ? isVisible = false : isVisible = true
+    isVisible ? Menu.style.display = "block" : Menu.style.display = ''
 }
