@@ -16,31 +16,92 @@
 
 .wrapper header {
   width: 100%;
-  height: 10vh;
+  /* height: 10vh; */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  background-color: crimson;
+  grid-template-rows: repeat(12, 1fr);
 }
 .wrapper header .logo {
   width: 100%;
-  height: 100%;
   grid-column: 2;
+  grid-row: 1 / -1;
 }
 .wrapper header .logo img {
-    height: 100%;
   width: 100%;
 }
+.wrapper header .heading {
+  grid-column: 3 / 9;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-row: 1 / -1;
+}
 .wrapper header .navigation {
-grid-column: 5 / 12;
-    height: 100%;
+  grid-column: 7 / -1;
+  grid-row: 1 / -1;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+.wrapper header .navigation nav {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  height: 100%;
   width: 100%;
 }
 .wrapper header .navigation nav ul {
-display: flex;
+grid-column: 1 / -1;
+grid-row: 1 / -1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.wrapper header .navigation nav ul li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.wrapper header .navigation nav ul li a{
+  width: 100%;
+  height: 100%;
 }
 .wrapper header .togglebutton {
-    grid-column: 12;
-    height: 100%;
+  grid-column: 12;
+  grid-row: 1 / -1;
+  height: 100%;
   width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    background-color: brown;
+  }
+
+  .wrapper header .heading {
+    grid-column: 3 / 5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-row: 1 / -1;
+  }
+
+  .wrapper header .navigation { 
+    display: block;
+  }
+  .wrapper header .togglebutton {
+    display: none;
+  }
+
 }
