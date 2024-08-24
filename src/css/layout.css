@@ -21,6 +21,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto, auto, auto;
+  overflow: hidden;
 }
 .wrapper header .logo {
   width: 100%;
@@ -58,25 +59,30 @@
 .wrapper header .navigation nav ul {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
   width: 100%;
   height: 100%;
 }
 .wrapper header .navigation nav ul li {
+  grid-column: 1 / -1;
   width: 100%;
-  height: 100%;
+  height: 40px;
   display: flex;
+  overflow: hidden;
 }
 .wrapper header .navigation nav ul li a {
   width: 100%;
   height: 100%;
   padding: 8px;
 }
+.wrapper header .navigation nav ul li a:hover {
+ scale: 101%;
+ background-color: rgb(15, 3, 68);
+}
+
 .wrapper header .togglebutton {
-  grid-column: 11;
+  grid-column: 12;
   grid-row: 1 / -1;
   height: 100%;
   width: 100%;
@@ -110,6 +116,7 @@ footer .footernavigation nav ul li {
   width: 100%;
   height: 100%;
   display: grid;
+  border: solid;
 }
 footer .footernavigation nav ul li a {
   width: 100%;
@@ -243,7 +250,7 @@ footer .footertext p {
     padding: 8px;
   }
   .wrapper header .togglebutton {
-    grid-column: 12;
+    grid-column: 11;
     grid-row: 1 / -1;
     height: 100%;
     width: 100%;
@@ -345,6 +352,9 @@ footer .footertext p {
     width: 100%;
     height: 100%;
     padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .wrapper header .togglebutton {
     display: none;
