@@ -132,7 +132,6 @@ footer .footertext p {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr), auto;
-    background-color: darkslateblue;
   }
   .wrapper header .logo {
     width: 100%;
@@ -203,7 +202,6 @@ footer .footertext p {
 @media screen and (min-width: 1000px) {
   .wrapper header {
     /* height: 10vh; */
-    background-color: brown;
     display: grid;
     grid-template-rows: repeat(12, 1fr);
     grid-template-columns: repeat(12, 1fr);
