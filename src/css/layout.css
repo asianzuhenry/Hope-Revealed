@@ -3,7 +3,7 @@
   padding: 0px;
   scroll-behavior: smooth;
   font-family: Arial, sans-serif;
-  border: 0.1px solid black;
+  /* border: 0.1px solid black; */
 }
 
 .wrapper {
@@ -133,6 +133,8 @@ footer .footertext p {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
 }
+
+/* hero-section */
 .wrapper main .hero-section {
   height: 100vh;
   width: 100%;
@@ -149,6 +151,35 @@ footer .footertext p {
   grid-row: 5;
   grid-column: 2 / 12;
 }
+
+/* about-section */
+
+.about-section {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.wrapper main .about-section .abouttext {
+  grid-row: 3 / 5;
+  grid-column: 2 / 12;
+  text-align: center;
+}
+.wrapper main .about-section .aboutimages {
+  width: 100%;
+  grid-row: 6 / 10;
+  grid-column: 2 / 12;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.wrapper main .about-section .aboutimages img {
+  width: 100%;
+  height: 100%;
+}
+
 
 @media screen and (min-width: 600px) {
   .wrapper header {
