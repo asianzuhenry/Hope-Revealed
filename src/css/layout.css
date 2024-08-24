@@ -76,12 +76,12 @@
   padding: 8px;
 }
 .wrapper header .navigation nav ul li a:hover {
- scale: 101%;
- background-color: rgb(15, 3, 68);
+  scale: 101%;
+  background-color: rgb(15, 3, 68);
 }
 
 .wrapper header .togglebutton {
-  grid-column: 12;
+  grid-column: 11;
   grid-row: 1 / -1;
   height: 100%;
   width: 100%;
@@ -93,33 +93,50 @@
 /* footer */
 footer {
   grid-row: 3;
+  height: 100%;
   width: 100%;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
+  padding-top: 20px;
+  background-color: greenyellow;
 }
+
 footer .footernavigation {
+  grid-column: 1 / -1;
   grid-row: 1;
+  height: 100%;
   width: 100%;
-  height: 200px;
 }
 footer .footernavigation nav {
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  height: 100%;
   width: 100%;
-  height: 200px;
 }
 footer .footernavigation nav ul {
-  width: 100%;
-  height: 200px;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
   display: grid;
-}
-footer .footernavigation nav ul li {
+  grid-template-columns: repeat(1, 1fr);
   width: 100%;
   height: 100%;
-  display: grid;
-  border: solid;
+}
+footer .footernavigation nav ul li {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  overflow: hidden;
 }
 footer .footernavigation nav ul li a {
   width: 100%;
   height: 100%;
+  padding: 8px;
+}
+footer .footernavigation nav ul li a:hover {
+  scale: 101%;
+  background-color: rgb(15, 3, 68);
 }
 footer .footertext {
   grid-row: 2;
@@ -137,7 +154,7 @@ footer .footertext p {
 .wrapper main {
   width: 100%;
   display: grid;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: 100vh repeat(1, 1fr);
 }
 
 /* hero-section */
@@ -161,7 +178,7 @@ footer .footertext p {
 /* about-section */
 
 .about-section {
-  height: 100vh;
+  height: 150vh;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -173,15 +190,14 @@ footer .footertext p {
   text-align: center;
 }
 .wrapper main .about-section .aboutimages {
-  grid-row: 5;
+  grid-row: 5 / 11;
   grid-column: 1 / -1;
   text-align: center;
-  display: none;
 }
 .wrapper main .about-section .aboutimages img {
-  width: 100%;
+  width: 90%;
+  height: 200px;
 }
-
 
 @media screen and (min-width: 600px) {
   .wrapper header {
@@ -253,8 +269,53 @@ footer .footertext p {
     justify-content: center;
   }
 
+  /* hero-section */
+  .wrapper main .hero-section {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+  .wrapper main .hero-section h2 {
+    grid-row: 3;
+    grid-column: 2 / 12;
+    text-align: center;
+  }
+  .wrapper main .hero-section p {
+    grid-row: 5;
+    grid-column: 2 / 12;
+  }
 
+  /* about-section */
 
+  .about-section {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+  .wrapper main .about-section .abouttext {
+    grid-row: 2 / 4;
+    grid-column: 2 / -2;
+    text-align: center;
+    display: grid;
+    gap: 20px;
+  }
+  .wrapper main .about-section .aboutimages {
+    grid-row: 5 / 11;
+    grid-column: 2 / -2;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 8px;
+    gap: 8px;
+  }
+  .wrapper main .about-section .aboutimages img {
+    width: 100%;
+    height: 300px;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -310,10 +371,11 @@ footer .footertext p {
     display: none;
   }
 
-    /* footer */
+  /* footer */
   footer {
     grid-row: 3;
     width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 20px 1fr 20px 1fr 20px;
     grid-template-rows: 20px repeat(1, 1fr) 20px;
@@ -323,12 +385,11 @@ footer .footertext p {
     grid-row: 2;
     width: 100%;
     height: 200px;
-  } 
+  }
   footer .footertext {
     grid-column: 2;
     grid-row: 2;
     width: 100%;
     height: 200px;
-  } 
-
+  }
 }
