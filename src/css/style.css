@@ -3,6 +3,7 @@
     --color-secondary: cornflowerblue;
     --color-secondary-dark: #031d4d;
     --color-white: #ffffff;
+    --color-black: #000000;
     --textxxl: 52px;
     --textxl: 32px;
     --textl: 24px;
@@ -46,6 +47,7 @@
   }
   .wrapper header .navigation nav ul li {
    list-style: none;
+   margin: 4px 0px;
   }
   @media screen and (min-width: 1000px) {
     .wrapper header .navigation nav ul li a {
@@ -67,6 +69,7 @@
     color: var(--color-white);
     text-decoration: none;
     font-size: var(--textl);
+    text-align: start;
   }
   .wrapper header .navigation nav ul li a:hover {
     background-color: var(--color-secondary);
@@ -114,7 +117,11 @@
     font-size: var(--textl);
     color: var(--color-white);
   }
-
+  footer .footerlogo h2 {
+    color: var(--color-white);
+    font-size: var(--textxl);
+  
+  }
   footer .footertext {
     grid-row: 2;
     width: 100%;
@@ -125,6 +132,7 @@
   footer .footertext p {
     padding: 8px;
     font-size: var(--textl);
+    color: var(--color-white);
     text-align: center;
   }
 
@@ -138,9 +146,15 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .wrapper main .hero-section h2 {
-  font-size: var(--textxxl);
+  font-size: var(--textxl);
+}
+@media screen and (min-width: 1000px) {
+  .wrapper main .hero-section h2 {
+    font-size: var(--textxxl);
+  }
 }
 .wrapper main .hero-section p {
   text-align: center;
@@ -161,9 +175,159 @@
 .about-section .abouttext p{
   font-size: var(--textl);
 }
+.about-section .abouttext p strong{
+  font-size: var(--textl);
+  color: var(--color-secondary-dark);
+}
 
 .wrapper main .about-section .aboutimages img {
   width: 100%;
   height: 100%;
   border-radius: 12px;
+  transition: 0.5s;
 }
+.wrapper main .about-section .aboutimages img:hover {
+  box-shadow: 0px 4px 50px 4px var(--color-primary);
+  transition: 0.5s;
+}
+
+  /* ourmission-section */
+  .ourmission-section {
+    background-color: var(--color-secondary-dark);
+  }
+  .ourmissiontext {
+
+  }
+  @media screen and (min-width: 600px) {
+    .ourmissiontext {
+      padding: 8px;
+      border-radius: 12px;
+      background-color: var(--color-black);
+      box-shadow: 12px 12px 12px 1px var(--color-primary);
+    }
+    
+  }
+  .ourmissiontext h2{
+    font-size: var(--textxl);
+    color: var(--color-primary);
+    text-align: start;
+  }
+  .ourmissiontext p{
+    font-size: var(--textl);
+    color: var(--color-white);
+    text-align: center;
+  }
+  .ourmissionimage {
+  }
+  .ourmissionimage img {
+    border-radius: 12px;
+    transition: 0.5s;
+  }
+  .ourmissionimage img:hover {
+    box-shadow: 0px 0px 20px 0px var(--color-primary);
+    transition: 0.5s;
+    scale: 104%;
+    cursor: pointer;
+  }
+  .ourmissionimages {
+  }
+  .ourmissionimages img {
+    transition: 0.5s;
+    border-radius: 12px;
+  }
+  .ourmissionimages img:hover {
+    box-shadow: 0px 0px 20px 0px var(--color-primary);
+    transition: 0.5s;
+    scale: 104%;
+    cursor: pointer;
+  }
+  
+  
+  /* getinvolved-section */
+  .getinvolved-section {
+    background-color: var(--color-secondary);
+  }
+  .getinvolvedtext {
+
+  }
+  @media screen and (min-width: 600px) {
+    .getinvolvedtext {
+      border-radius: 12px;
+    }
+    
+  }
+  .getinvolvedtext h2{
+    font-size: var(--textxl);
+    color: var(--color-primary);
+    text-align: start;
+  }
+  .getinvolvedtext p{
+    font-size: var(--textl);
+    color: var(--color-white);
+    text-align: center;
+  }
+  .getinvolvedimage {
+  }
+  .getinvolvedimages {
+  }
+  .getinvolvedimages img {
+    transition: 0.2s;
+    border-radius: 12px;
+  }
+  .getinvolvedimages img:hover {
+    transition: 0.2s;
+    cursor: pointer;
+   scale: 105%;
+  }
+
+
+
+/* contactus-section */
+
+.contactus-section {
+  background-image: url(../assets/images/image5.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contactus-section .contacttext {
+  background-color: rgba(128, 128, 128, 0.836);
+}
+.contactus-section .contacttext .text {
+}
+.contactus-section .contacttext .text h2 {
+  font-size: var(--textxl);
+  color: var(--color-primary);
+}
+.contactus-section .contacttext .text p {
+  font-size: var(--textl);
+}
+
+.contactus-section .contacttext .contactlinks {
+  background-color: rgba(245, 245, 245, 0.705);
+  border-radius: 8px;
+}
+.contactus-section .contacttext .contactlinks .link {
+  background-color: rgb(134, 132, 132);
+  border: 2px dashed;
+  animation: rotate 2s ease infinite forwards;
+  transition: 1s;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+}
+.contactus-section .contacttext .contactlinks .link:hover {
+  scale: 110%;
+cursor: pointer;
+transition: 1s;
+}
+
+@keyframes rotate{
+  0% {
+transform: rotate(0deg);
+  }
+  100% {
+transform: rotate(360deg);
+  }
+}
+
