@@ -11,7 +11,6 @@
     />
     <link rel="stylesheet" href="./src/css/style.css" />
     <link rel="stylesheet" href="./src/css/layout.css" />
-    <link rel="stylesheet" href="./src/css/mediaqueries.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -25,12 +24,12 @@
         <div class="navigation">
           <nav>
             <ul>
-              <li><a href="#">Back To Top</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Mission</a></li>
-              <li><a href="#">Get Involved</a></li>
-              <li><a href="#">What We Do</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <!-- <li><a href="#">Back To Top</a></li> -->
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#ourmission">Our Mission</a></li>
+              <li><a href="#getinvolved">Get Involved</a></li>
+              <li><a href="#whatwedo">What We Do</a></li>
+              <li><a href="#contact">Contact Us</a></li>
             </ul>
           </nav>
         </div>
@@ -40,14 +39,16 @@
       </header>
       <main>
         <section class="hero-section">
-          <h2>Welcome To Hope Revealed</h2>
+          <div class="overlay">
+            <h2>Welcome To Hope Revealed</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Praesentium, et. Omnis pariatur, praesentium temporibus accusamus
             enim deserunt, dolor, minima officiis et sequ
           </p>
+        </div>
         </section>
-        <section class="about-section">
+        <section class="about-section" id="about">
           <div class="abouttext">
             <h2>About Us</h2>
             <p>
@@ -65,7 +66,7 @@
             <img src="./src/assets/images/image2.jpg" alt="" />
           </div>
         </section>
-        <section class="ourmission-section">
+        <section class="ourmission-section" id="ourmission">
           <div class="ourmissiontext">
             <h2>Our Mission</h2>
             <p>
@@ -84,7 +85,7 @@
             <img src="./src/assets/images/image2.jpg" alt="" />
           </div>
         </section>
-        <section class="getinvolved-section">
+        <section class="getinvolved-section" id="getinvolved">
           <div class="getinvolvedtext">
             <h2>Get Involved</h2>
             <p>
@@ -100,7 +101,88 @@
             <img src="./src/assets/images/image2.jpg" alt="" />
           </div>
         </section>
-        <div class="contactus-section">
+        <section class="whatwedo-section" id="whatwedo">
+          <div class="intro-text">
+            <div class="overlay">
+
+              <h2>What We Do</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium, et. Omnis pariatur, praesentium temporibus accusamus
+              enim deserunt, dolor, minima officiis et sequ
+            </p>
+            </div>
+          </div>
+          <div class="whatwedolist">
+            <div class="whatwedo-card">
+              <div class="cardtext">
+                <h2>Health Initiatives</h2>
+                <p>
+                  Promoting health and wellness is at the heart of our mission.
+                  Through partnerships and community engagement, we provide
+                  access to essential healthcare services, conduct health
+                  awareness programs, and support initiatives that improve the
+                  overall well-being of individuals and families.
+                </p>
+              </div>
+              <div class="cardimage">
+                <img src="./src/assets/images/image4.jpg" alt="" />
+              </div>
+            </div>
+            <div class="whatwedo-card">
+              <div class="cardtext">
+                <h2>Sports Development</h2>
+                <p>
+                  We believe in the power of sports to inspire and empower. Our
+                  programs aim to foster talent, promote physical fitness, and
+                  teach valuable life skills such as teamwork and discipline
+                  through various sporting activities and events.
+                </p>
+              </div>
+              <div class="cardimage">
+                <img src="./src/assets/images/image4.jpg" alt="" />
+              </div>
+            </div>
+            <div class="whatwedo-card">
+              <div class="cardtext">
+                <h2>Christian Mission Outreaches</h2>
+                <p>
+                  Rooted in faith, we are committed to spreading love,
+                  compassion, and the message of hope. Our Christian mission
+                  outreaches encompass spiritual guidance, humanitarian aid, and
+                  community building efforts that aim to uplift and support
+                  those in need.
+                </p>
+              </div>
+              <div class="cardimage">
+                <img src="./src/assets/images/image4.jpg" alt="" />
+              </div>
+            </div>
+            <div class="whatwedo-card">
+              <div class="cardtext">
+                <h2>Agriculture Initiatives</h2>
+                <p>
+                  Sustainable agriculture is key to community development. We empower local farmers with training, resources, and technology to enhance agricultural productivity, promote food security, and improve livelihoods.
+                </p>
+              </div>
+              <div class="cardimage">
+                <img src="./src/assets/images/image4.jpg" alt="" />
+              </div>
+            </div>
+            <div class="whatwedo-card">
+              <div class="cardtext">
+                <h2>Livelihood Activities</h2>
+                <p>
+                  Economic empowerment is fundamental to breaking the cycle of poverty. Through skill development programs, micro-enterprise support, and vocational training, we enable individuals to build sustainable livelihoods and achieve financial independence.
+                </p>
+              </div>
+              <div class="cardimage">
+                <img src="./src/assets/images/image4.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="contactus-section" id="contact">
           <div class="contacttext">
             <div class="text">
               <h2>Contact Us</h2>
@@ -110,19 +192,12 @@
                 positive impact in the lives of others.
               </p>
             </div>
-            <div class="contactlinks">
-              <div class="link"></div>
-              <div class="link"></div>
-              <div class="link"></div>
-              <div class="link"></div>
-            </div>
           </div>
-
-        </div>
+        </section>
       </main>
       <footer>
         <div class="footerlogo">
-          <img src="./src/assets/images/logo.jpg" alt="">
+          <img src="./src/assets/images/logo.jpg" alt="" />
           <h2>Hope Revealed</h2>
         </div>
         <div class="footertext">
@@ -137,11 +212,11 @@
           <nav>
             <ul>
               <li><a href="#">Back To Top</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Our Mission</a></li>
-              <li><a href="#">Get Involved</a></li>
-              <li><a href="#">What We Do</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#ourmission">Our Mission</a></li>
+              <li><a href="#getinvolved">Get Involved</a></li>
+              <li><a href="#whatwedo">What We Do</a></li>
+              <li><a href="#contact">Contact Us</a></li>
             </ul>
           </nav>
         </div>

@@ -1,10 +1,4 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  scroll-behavior: smooth;
-  font-family: Arial, sans-serif;
-}
-
+/* LAYOUT */
 .wrapper {
   width: 100%;
   height: 100%;
@@ -80,7 +74,6 @@
 }
 .wrapper header .navigation nav ul li a:hover {
   scale: 101%;
-  background-color: rgb(15, 3, 68);
   transition: 0.5s;
   padding: 8px 20px;
 }
@@ -147,7 +140,6 @@ footer .footernavigation nav ul li a {
 }
 footer .footernavigation nav ul li a:hover {
   scale: 101%;
-  background-color: rgb(15, 3, 68);
   transition: 0.5s;
   padding: 8px 20px;
 }
@@ -173,6 +165,7 @@ footer .footertext {
   height: 100%;
   display: grid;
   align-items: center;
+  margin-top: 20px;
 }
 footer .footertext p {
   text-align: center;
@@ -194,6 +187,13 @@ footer .footertext p {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
 }
+.wrapper main .hero-section .overlay {
+  grid-row: 1 / -1;
+  grid-column: 1/ -1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
 .wrapper main .hero-section h2 {
   grid-row: 3;
   grid-column: 2 / 12;
@@ -207,7 +207,7 @@ footer .footertext p {
 /* about-section */
 
 .about-section {
-  height: 150vh;
+  height: 180vh;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -222,10 +222,12 @@ footer .footertext p {
   grid-row: 6;
   grid-column: 1 / -1;
   text-align: center;
+  gap: 12px;
 }
 .wrapper main .about-section .aboutimages img {
   width: 90%;
   height: 200px;
+  margin: 12px 0px;
 }
 
 /* ourmission-section */
@@ -352,21 +354,60 @@ footer .footertext p {
   text-align: center;
 }
 
-.contactus-section .contacttext .contactlinks {
-  grid-row: 8 / 11;
-  grid-column: 2 / 12;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
+/* .whatwedo-section */
+.whatwedo-section {
+  height: 100%;
 }
-.contactus-section .contacttext .contactlinks .link {
-  padding: 12px;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+.intro-text {
+  height: 50vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.whatwedo-section .intro-text .overlay {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.whatwedo-section .intro-text .overlay h2 {
+  grid-row: 5;
+  grid-column: 2 / 12;
+  text-align: center;
+}
+.whatwedo-section .intro-text .overlay p {
+  grid-row: 7;
+  grid-column: 2 / 12;
+  text-align: center;
 }
 
+.whatwedo-section .whatwedolist {
+  width: 100%;
+height: fit-content;
+display: grid;
+gap: 12px;
+grid-template-columns: 1fr repeat(auto-fill, minmax(300px, 1fr));
+align-items: center;
+justify-content: center;
+}
+.whatwedo-section .whatwedo-card {
+  max-width: 90%;
+  width: 100%;
+  display: flex;
+flex-direction: column;
+padding: 4px;
+align-self: center;
+justify-self: center;
+}
+.whatwedo-section .whatwedo-card .cardimage {
+width: 100%;
+}
+.whatwedo-section .whatwedo-card .cardimage img {
+width: 100%;
+}
 
 
 @media screen and (min-width: 600px) {
@@ -444,7 +485,7 @@ display: block;
   
 /* footer */
 footer {
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   display: grid;
   grid-template-rows: repeat(12, 1fr);
@@ -492,7 +533,6 @@ footer .footernavigation nav ul li a {
 }
 footer .footernavigation nav ul li a:hover {
   scale: 101%;
-  background-color: rgb(15, 3, 68);
   transition: 0.5s;
   padding: 8px 20px;
 }
@@ -667,6 +707,66 @@ footer .footertext p {
     grid-row: 2;
     grid-column: 7 / -1;
   }
+/* .whatwedo-section */
+.whatwedo-section {
+  height: 100%;
+}
+.intro-text {
+  height: 50vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.whatwedo-section .intro-text .overlay {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.whatwedo-section .intro-text .overlay h2 {
+  grid-row: 4;
+  grid-column: 2 / 12;
+  text-align: center;
+}
+.whatwedo-section .intro-text .overlay p {
+  grid-row: 6;
+  grid-column: 2 / 12;
+  text-align: center;
+}
+
+.whatwedo-section .whatwedolist {
+  width: 100%;
+height: fit-content;
+display: grid;
+gap: 12px;
+grid-template-columns: repeat(1, 1fr);
+align-items: center;
+justify-content: center;
+}
+.whatwedo-section .whatwedo-card {
+  width: 100%;
+  max-width: 80%;
+  height: 400px;
+display: grid;
+grid-template-columns: 1fr, 2fr;
+margin: 12px;
+padding: 4px;
+align-self: center;
+justify-self: center;
+gap: 8px;
+}
+.whatwedo-section .whatwedo-card .cardimage {
+  grid-column: 2;
+width: 100%;
+height: 100%;
+}
+.whatwedo-section .whatwedo-card .cardimage img {
+width: 100%;
+height: 100%;
+}
 
 
   
@@ -697,18 +797,6 @@ footer .footertext p {
 .contactus-section .contacttext .text p {
   text-align: center;
 }
-
-.contactus-section .contacttext .contactlinks {
-  grid-row: 8 / 11;
-  grid-column: 5 / 9;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-
-
 }
 
 @media screen and (min-width: 1400px) {
@@ -763,12 +851,72 @@ footer .footertext p {
   }
   .wrapper header .navigation nav ul li a:hover {
     scale: 101%;
-    background-color: rgb(15, 3, 68);
     transition: 0.5s;
     padding: 0px;
   }
   .wrapper header .togglebutton {
     display: none;
   }
+
+
+   
+/* .whatwedo-section */
+.whatwedo-section {
+  height: 100%;
+}
+.intro-text {
+  height: 50vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.whatwedo-section .intro-text .overlay {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+.whatwedo-section .intro-text h2 {
+  grid-row: 5;
+  grid-column: 2 / 12;
+  text-align: center;
+}
+.whatwedo-section .intro-text p {
+  grid-row: 7;
+  grid-column: 2 / 12;
+  text-align: center;
+}
+
+.whatwedo-section .whatwedolist {
+  width: 100%;
+height: fit-content;
+display: grid;
+gap: 12px;
+grid-template-columns: repeat(2, 1fr);
+align-items: center;
+justify-content: center;
+}
+.whatwedo-section .whatwedo-card {
+  width: 100%;
+  height: 400px;
+display: grid;
+grid-template-columns: 1fr, 1fr;
+margin: 12px;
+padding: 4px;
+align-self: center;
+justify-self: center;
+}
+.whatwedo-section .whatwedo-card .cardimage {
+  grid-column: 2;
+width: 100%;
+height: 100%;
+}
+.whatwedo-section .whatwedo-card .cardimage img {
+width: 100%;
+height: 100%;
+}
 
 }
